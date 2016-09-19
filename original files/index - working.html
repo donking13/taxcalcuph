@@ -1,0 +1,66 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/style" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/style" href="css/style.css">
+<head>
+<body>
+	<main class="container">
+		<div id="birTaxCalc">	
+			<h2>Philippine salary and tax calculator (monthly)</h2>
+			<div id="basicSal">
+				<h3>Basic Salary</h3>
+				<input class="salary" type="number" placeholder="ex:15000">
+			</div>
+			<div id="status">
+				<h3>Number of dependents</h3>
+				<select class="independencies">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
+			</div>
+			<div id="suppComp">
+				<h3>Supplementary Compensation</h3>
+				<div>
+					<label for="commission">Commission</label>
+					<input id="commission" name="commission" type="text" placeholder="commission" value="0">
+				</div>
+				<div>
+					<label for="overtime">overtime</label>
+					<input id="overtime" name="overtime" type="text" placeholder="overtime pay" value="0">
+				</div>
+				<div>
+					<label for="night">Night Differential</label>
+					<input id="night" name="night" type="text" placeholder="Night Differential" value="0">
+				</div>
+				<div>
+					<label for="holiday">Holiday pay</label>
+					<input id="holiday" name="holiday" type="text" placeholder="Holiday Pay" value="0">
+				</div>
+				<div>
+					<label for="tax">taxable bonus</label>
+					<input id="bonus" type="text" name="tax" placeholder="taxable bonus" value="0">
+				</div>
+			</div>
+			<hr>
+			<div id="total">
+				<button style="width:100%; margin-bottom:24px;">Compute</button>
+				<div>
+					<label>Net income</label>
+					<input type="text" id="net">
+				</div>
+				<div>
+					<label>Widthholding tax</label>
+					<input type="text" id="tax">
+				</div>
+				
+			</div>
+		</div>
+  	</main>
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="calculator.js"></script>
+	<script src="birtaxcalculator.js"></script>
+</body>
+</html>

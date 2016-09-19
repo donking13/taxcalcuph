@@ -1,0 +1,68 @@
+#quoteform{
+	margin-top:10%;
+	margin-bottom:12px;
+}
+
+.quoteform > div, #calculator > div{
+	margin-top:12px;
+	margin-bottom:12px;
+}
+
+.container{
+	max-width:786px;
+	margin:0 auto;
+	width:100%;
+}
+
+/*.code > p{
+	max-width:400px;
+	margin:10px auto;
+	background-color:#ccc;
+	font-size: 14px;
+	color:#2f2f2f; 
+}*/
+
+nav{
+	margin-top:24px;
+
+}
+
+#total button{
+	width:50%;
+	margin:12px auto;
+}
+
+html head+body .ui-btn.ui-btn-b{
+	background-color: #38c;
+	border-color: #38c;
+	color: #fff;
+	text-shadow: 0 1px 0 #059;
+}
+
+/* Custom indentations are needed because the length of custom labels differs from
+   the length of the standard labels */
+.custom-size-flipswitch.ui-flipswitch .ui-btn.ui-flipswitch-on {
+    text-indent: -6.9em;
+}
+.custom-size-flipswitch.ui-flipswitch .ui-flipswitch-off {
+    text-indent: 0.5em;
+}
+/* Custom widths are needed because the length of custom labels differs from
+   the length of the standard labels */
+.custom-size-flipswitch.ui-flipswitch {
+    width: 8.875em;
+}
+.custom-size-flipswitch.ui-flipswitch.ui-flipswitch-active {
+    padding-left: 7em;
+    width: 1.875em;
+}
+@media (min-width: 28em) {
+    /*Repeated from rule .ui-flipswitch above*/
+    .ui-field-contain > label + .custom-size-flipswitch.ui-flipswitch {
+        width: 1.875em;
+    }
+}
+
+
+
+

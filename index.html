@@ -1,0 +1,85 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+<link rel="stylesheet" type="text/style" href="css/style.css">
+<head>
+<body>
+	<header data-role="header" data-theme="b">
+				<h2>Philippine salary and tax calculator </h2>
+	</header>
+	<main class="container">
+		<div id="birTaxCalc">
+			<div style="text-align:center;">
+				<input type="checkbox" id="cutoffBasis" data-role="flipswitch" name="flip-checkbox-3" id="flip-checkbox-3" data-on-text="semi-monthly" data-off-text="monthly" data-wrapper-class="custom-size-flipswitch">
+			</div>
+			<div id="basicSal">
+				<h3 class="ui-bar ui-bar-b">Basic Salary</h3>
+				<div class="ui-body ui-body-a">
+					<input class="salary" type="number" placeholder="ex:15000">
+				</div>
+			</div>
+			<div id="status">
+				<div class="ui-bar ui-bar-b">
+					<h3>Number of dependents</h3>
+				</div>
+				<div class="ui-body ui-body-a">
+					<input type="range" data-theme="c" class="independencies" name="slider-s" id="slider-s" value="0" min="0" max="4" data-highlight="true">
+				</div>
+			</div>
+			<div id="suppComp">
+				<div class="ui-bar ui-bar-b">
+					<h3>Supplementary Compensation</h3>
+				</div>
+				<div class="ui-body ui-body-a">
+					<div class="ui-field-contain">
+						<label for="commission">Commission</label>
+						<input id="commission" name="commission" type="text" placeholder="commission" value="0">
+					</div>
+					<div class="ui-field-contain">
+						<label for="overtime">overtime</label>
+						<input id="overtime" name="overtime" type="text" placeholder="overtime pay" value="0">
+					</div>
+					<div class="ui-field-contain">
+						<label for="night">Night Differential</label>
+						<input id="night" name="night" type="text" placeholder="Night Differential" value="0">
+					</div>
+					<div class="ui-field-contain">
+						<label for="holiday">Holiday pay</label>
+						<input id="holiday" name="holiday" type="text" placeholder="Holiday Pay" value="0">
+					</div>
+					<div class="ui-field-contain">
+						<label for="tax">taxable bonus</label>
+						<input id="bonus" type="text" name="tax" placeholder="taxable bonus" value="0">
+					</div>
+				</div>
+			</div>
+			
+			<div id="total">
+				<button data-role="button" data-theme="b">Compute</button>
+				<div class="ui-bar ui-bar-b">
+					<h3>Totals:</h3>
+				</div>
+				<div class="ui-body ui-body-a">	
+					<div class="ui-field-contain">
+						<label>Net income</label>
+						<input type="text" id="net">
+					</div>
+					<div class="ui-field-contain">
+						<label>Widthholding tax</label>
+						<input type="text" id="tax">
+					</div>
+				</div>
+			</div>
+		</div>
+  	</main>
+	<footer data-role="footer" data-theme="b">
+				<h5>powered by: <a href="http://webwayprojects.com/" target="_blank">webwayprojects</a></h5>
+	</footer>
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+	<script src="javascripts/calculator.js"></script>
+	<script src="javascripts/birtaxcalculator.js"></script>
+</body>
+</html>

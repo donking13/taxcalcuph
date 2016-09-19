@@ -1,0 +1,60 @@
+<div class="quoteform">
+        	<h2>Simple Quote Form</h2>
+        	<div>
+        		<select id="terminate" class="form-control" >
+					<option class="choose" value="0">choose</option>
+					<option class="choose" value="150">termite</option>
+					<option class="choose" value="550">rat</option>
+        		</select>
+        	</div>
+			<div class="input-group">
+				<input id="area" class="form-control" type="text" value="" placeholder="floor area">
+				<span class="input-group-addon">m&sup2;</span>
+			</div>
+			<div class="quotebutton">
+				<button id="calculate" class="btn btn-default form-control">calculate</button>
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon">&#8369;</span>
+				<input id="quote" class="form-control" type="text" placeholder="total" value="" disabled>
+				<span class="input-group-addon">.00</span>
+			</div>
+			<div class="code">
+					<button class="js">js</button><button class="html">html</button>
+						<pre class="prejs">
+		$(".quoteform").on("click","button", function(){
+			var $price = $("#terminate").val();
+			var $area = $("#area").val();
+			var $total = $area * $price;
+		
+			if($price == 0){
+		  	 alert("please choose a pest");
+			}else{
+			$("#quote").attr("value",$total);
+			}
+		});
+						</pre>
+						<pre class="hidden prehtml">
+		&lt;h2&gt;Simple Quote Form&lt;/h2&gt;
+        	&lt;div&gt;
+        		&lt;select id="terminate" class="form-control" &gt;
+					&lt;option class="choose" value="0"&gt;choose&lt;/option&gt;
+					&lt;option class="choose" value="150"&gt;termite&lt;/option&gt;
+					&lt;option class="choose" value="550"&gt;rat&lt;/option&gt;
+        		&lt;/select&gt;
+        	&lt;/div&gt;
+			&lt;div class="input-group"&gt;
+				&lt;input id="area" class="form-control" type="text" value="" placeholder="floor area"&gt;
+				&lt;span class="input-group-addon"&gt;m&sup2;&lt;/span&gt;
+			&lt;/div&gt;
+			&lt;div&gt;
+				&lt;button id="calculate" class="btn btn-default form-control"&gt;calculate&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class="input-group"&gt;
+				&lt;span class="input-group-addon"&gt;&#8369;&lt;/span&gt;
+				&lt;input id="quote" class="form-control" type="text" placeholder="total" value="" disabled&gt;
+				&lt;span class="input-group-addon"&gt;.00&lt;/span&gt;
+			&lt;/div&gt;					
+						</pre>	
+			</div>
+		</div>

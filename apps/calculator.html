@@ -1,0 +1,118 @@
+<div id="calculator">
+ 			<h2>Simple Calculator</h2>
+			<div id="totalbox">
+				<input id="total" type="text" />
+			</div>
+			<div id="numbers">
+				<button class="btn">1</button>
+				<button class="btn">2</button>
+				<button class="btn">3</button>
+				<button class="btn">4</button>
+				<button class="btn">5</button>
+				<button class="btn">6</button>
+				<button class="btn">7</button>
+				<button class="btn">8</button>
+				<button class="btn">9</button>
+				<button class="btn">0</button>
+			</div>
+			<div id="operators">
+				<button class="btn">+</button>
+				<button class="btn">-</button>
+				<button class="btn">/</button>
+				<button class="btn">*</button>
+				<button class="btn" id="clear">AC</button>
+			</div>
+			<div id="equals">
+				<button class="btn">=</button>
+			</div>
+			<div class="code">
+					<button class="js">js</button><button class="html">html</button>
+						<pre class="prejs">
+	var number = "";
+	var operator = "";
+	var total = "";
+	var newnumber = "";
+	$('#total').val(0);
+
+	$("#numbers").on('click','button', function(){
+			number = number + $(this).text();
+			$('#total').val(number);
+			console.log(number);
+	})
+	$('#operators').not('#clear').on('click','button', function(){
+			newnumber = number;
+			number = " ";
+			operator = $(this).text();
+			console.log(operator);
+	})
+	$('#equals').on('click','button',function(){
+		
+		function parseNum(){
+			newnumber = parseInt(newnumber);
+			number = parseInt(number);		
+		}
+		function totalAnswer(){
+			$('#total').val(answer);
+			console.log(answer);
+		}
+
+		if(operator === "+"){
+			parseNum();
+			var answer = newnumber + number;
+			totalAnswer();	
+		}
+		if(operator === "-"){
+			parseNum();
+			var answer = newnumber - number;
+			totalAnswer();
+		}
+		if(operator === "/"){
+			parseNum();
+			var answer = newnumber / number;
+			totalAnswer();
+		}
+		if(operator === "*"){
+			parseNum();
+			var answer = newnumber * number;
+			totalAnswer();	
+		}
+	});
+
+	$('#clear').on('click', function(){
+		number = " ";
+		newnumber = " ";
+		$('#total').val(0);
+	});
+						</pre>
+<pre class="hidden prehtml">
+			
+	&lt;h2&gt;Simple Calculator&lt;/h2&gt;
+	&lt;div id="totalbox"&gt;
+		&lt;input id="total" type="text" /&gt;
+	&lt;/div&gt;
+	&lt;div id="numbers"&gt;
+		&lt;button class="btn"&gt;1&lt;/button&gt;
+		&lt;button class="btn"&gt;2&lt;/button&gt;
+		&lt;button class="btn"&gt;3&lt;/button&gt;
+		&lt;button class="btn"&gt;4&lt;/button&gt;
+		&lt;button class="btn"&gt;5&lt;/button&gt;
+		&lt;button class="btn"&gt;6&lt;/button&gt;
+		&lt;button class="btn"&gt;7&lt;/button&gt;
+		&lt;button class="btn"&gt;8&lt;/button&gt;
+		&lt;button class="btn"&gt;9&lt;/button&gt;
+		&lt;button class="btn"&gt;0&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;div id="operators"&gt;
+		&lt;button class="btn"&gt;+&lt;/button&gt;
+		&lt;button class="btn"&gt;-&lt;/button&gt;
+		&lt;button class="btn"&gt;/&lt;/button&gt;
+		&lt;button class="btn"&gt;*&lt;/button&gt;
+		&lt;button class="btn" id="clear"&gt;AC&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;div id="equals"&gt;
+		&lt;button class="btn"&gt;=&lt;/button&gt;
+	&lt;/div&gt;
+			
+</pre>	
+</div>
+		
